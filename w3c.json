@@ -1,0 +1,11 @@
+{
+  "group": [
+    "wg/json-ld"
+  ],
+  "contacts": [
+    "pchampin",
+    "iherman"
+  ],
+  "policy": "open",
+  "repo-type": "process"
+}
