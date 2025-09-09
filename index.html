@@ -55,7 +55,7 @@
           <li><a href="#background">Background</a></li>
           <li><a href="#scope">Scope</a></li>
           <li><a href="#deliverables">Deliverables</a></li>
-		      <li><a href="#success-criteria">Success Criteria</a></li>
+          <li><a href="#success-criteria">Success Criteria</a></li>
           <li><a href="#coordination">Coordination</a></li>
           <li><a href="#participation">Participation</a></li>
           <li><a href="#communication">Communication</a></li>
@@ -76,7 +76,7 @@
       <!-- replace DRAFT with PROPOSED when the AC review starts -->
       <!-- delete PROPOSED after AC review completed -->
 
-      <p class="mission">The <strong>mission</strong> of the <a href="https://www.w3.org/groups/wg/json-ld">JSON-LD Working Group</a> is to maintain and extend the <a href="https://www.w3.org/groups/wg/json-ld/publications">family of JSON-LD 1.1 Recommendations</a> and related Working Group Notes.</p>
+      <p class="mission">The <strong>mission</strong> of the <a href="https://www.w3.org/groups/wg/json-ld">JSON-LD Working Group</a> is to maintain and extend the <a href="https://www.w3.org/groups/wg/json-ld/publications">family of JSON-LD Recommendations</a> and related Working Group Notes.</p>
 
       <div class="noprint">
         <p class="join"><a href="https://www.w3.org/groups/wg/json-ld/join">Join the JSON-LD Working Group.</a></p>
@@ -97,7 +97,7 @@
               Charter Status
             </th>
             <td>
-              See the <a href="https://www.w3.org/groups/wg/json-ld/charters">group status page</A> and <a href="#history">detailed change history</a>.
+              See the <a href="https://www.w3.org/groups/wg/json-ld/charters">group status page</a> and <a href="#history">detailed change history</a>.
             </td>
           </tr>
           <tr id="Duration">
@@ -137,7 +137,7 @@
               Meeting Schedule
             </th>
             <td>
-              <strong>Teleconferences:</strong> On an as-needed basis, at least every quarter.
+              <strong>Teleconferences:</strong> 1-hour calls will be held weekly.
               <br>
               <strong>Face-to-face:</strong> we will meet during the W3C's annual Technical Plenary week; additional face-to-face meetings may be scheduled by consent of the participants, usually no more than 3 per year.
             </td>
@@ -152,58 +152,121 @@
           JSON-LD (JavaScript Object Notation for Linked Data) is a widely used method of encoding Linked Data using JSON.
           Use of JSON-LD has grown and expanded over the last decade (since it's first publication as a
           <a href="https://www.w3.org/TR/json-ld-api1/">W3C Recommendation in 2014</a>).
-          JSON-LD remains a popular choice for ecoding <abbr title="Seach Engine Optimization">SEO</abbr>-focused
-          structured data in Web pages. JSON-LD has also become a foundational format for social media (ActivityStreams),
-          Internet of Things data (Web of Things Description), Verifiable Credentials, and Software Bill of Materials (SPDX).
+          JSON-LD remains a popular choice for encoding <abbr title="Seach Engine Optimization">SEO</abbr>-focused
+          structured data in Web pages using <a href="https://schema.org">schema.org</a>. JSON-LD has also become a foundational format for social media
+          (<a href="https://www.w3.org/TR/activitystreams-core/">ActivityStreams</a>),
+          Internet of Things data (<a href="https://www.w3.org/TR/wot-thing-description11/">Web of Things Description</a>),
+          <a href="https://www.w3.org/TR/vc-data-model-2.0/">Verifiable Credentials</a>, and Software Bill of Materials
+          (<a href="https://spdx.github.io/spdx-spec/v3.0.1/serializations/#serialization-in-json-ld">SPDX</a>).
         </p>
-        <p>This growth in the applied use of JSON-LD has resulted in community interest in additional expressions of
-          JSON-LD's underlying Linked Data structure into other formats. YAML-LD has been created by the
+
+        <p>This growth in the applied use of JSON-LD has led to a community interest in additional expressions of
+          JSON-LD's underlying Linked Data structure in other formats. YAML-LD has been created by the
           <a href="https://www.w3.org/community/json-ld/">JSON for Linking Data Community Group</a> for easing human
           authoring and providing a clearer path for using Linked Data applied to popular YAML-based documents such as
-          infrastructure as code, static site front matter, and API documentation formats. Additionally, a need has
-          arised in the Verifiable Credentials space for providing a more compressed expression of JSON-LD, and work on
-          CBOR-LD was begun in the JSON-LD CG.
+          infrastructure as code, static site front matter, and API documentation formats.
         </p>
+
         <p>
-          The hope of this new more inclusively focused JSON-LD WG is to meet the demand of the broader
-          JSON-LD community by strengthening the foundational JSON-LD specifications and aligning it with the latest
-          RDF 1.2 specifications, growing the family of JSON-LD related formats which orbit around the JSON-LD
-          processing model, and specifing improved context retrieval methods for greater clarity and stability.
+          For a number of application areas, the size of JSON-LD content is an obstacle. Size constraints may be
+          encountered when storing data as a QR or in a barcode, transmitting data over low bandwidth channels, or when relying
+          on high volume data storage. These constraints are not only significant for existing applications, but are also
+          obstacles when enabling new application areas (e.g., in embedded systems). CBOR-LD, based on 
+          <a href="https://cbor.io/spec.html">CBOR</a> (which already has a large user and tool base), can exploit 
+          the linked data features of JSON-LD, and provide a high level and easily reversible compression of
+          JSON-LD data. Work on CBOR-LD has begun in the <a href="https://www.w3.org/community/json-ld/">JSON 
+          for Linking Data Community Group</a>, and will be finalized by the JSON-LD Working Group.
         </p>
+
+        <p>
+          The goal of this new, more inclusively focused JSON-LD WG is to meet the demand of the broader
+          JSON-LD community by strengthening the foundational JSON-LD specifications, growing the family 
+          of JSON-LD related formats which orbit around the JSON-LD processing model, and specifying improved
+          context retrieval methods for greater clarity and stability.
+        </p>
+
       </div>
 
       <section id="scope" class="scope">
         <h2>Scope</h2>
 				<p>
-					The Working Group will extend the recommendations defining the JSON-LD specifications (i.e., <a href="https://www.w3.org/TR/json-ld11/">JSON-LD 1.1</a>, <a href="https://www.w3.org/TR/json-ld11-api/">JSON-LD 1.1 API</a>, <a href="https://www.w3.org/TR/json-ld11-framing/">JSON-LD 1.1 Framing</a>)
-          with the features introduced by <a href="https://www.w3.org/TR/rdf12-concepts">RDF 1.2</a>
-          in addition to open Errata and requested features
-          as noted on the groups <a href="https://github.com/orgs/w3c/projects/84">Project Management Page</a>.
-          These specifications together provide a JSON format for Linked Data to interoperate in a method which is familiar to and usable by software engineers.
-					<!-- Note that the JSON-LD APIs are not browser specific; while appropriate for use within browsers, they are not limited to such use, and there is no requirement for browsers to implement them natively. -->
-				</p>
+					The Working Group will evolve the recommendations defining the JSON-LD specifications 
+          (i.e., <a href="https://www.w3.org/TR/json-ld11/">JSON-LD 1.1</a>, 
+          <a href="https://www.w3.org/TR/json-ld11-api/">JSON-LD 1.1 API</a>, and
+          <a href="https://www.w3.org/TR/json-ld11-framing/">JSON-LD 1.1 Framing</a>) by handling Errata 
+          and by adding requested features as recorded on the group's 
+          <a href="https://github.com/orgs/w3c/projects/84">Project Management Page</a>. In order to handle these, 
+          the Working Group will issue new versions of these recommendations, possibly with new features,
+          in order to render future usage and evolutions easier. In particular, the Working Group will handle 
+          two important security related problems:
+        </p>
+
+
+        <ol>
+          <li>
+            JSON-LD has become a common structural foundation for a wide range of data models. Some of 
+            those environments have more restrictive requirements than others on how unmapped terms should be treated (i.e., 
+            when JSON keys present in the document have no term definition in the context). The current 
+            JSON-LD API stipulates that the unknown term is silently ignored. The Working Group will specify 
+            a "safe mode", that will detect these situations and cause the processing to fail. This mode is 
+            already available in some JSON-LD API implementations, such as 
+            <a href="https://github.com/digitalbazaar/jsonld.js?tab=readme-ov-file#safe-mode">jsonld.js</a> and 
+            <a href="https://dotnetrdf.org/2025-07-03-dn4-3-4-0-released/#:~:text=This%20release%20also%20introduces%20a,rather%20than%20silently%20ignoring%20them.">dotNetRDF</a>, 
+            and is especially useful if the resulting RDF Graph is to be canonicalized.
+          </li>
+          <li>
+            External (i.e., non-inline) JSON-LD context files are identified using URIs. This is a common
+            pattern across many technologies that has, at times, confused implementers who 
+            expect that they should always use these identifiers as locators, and dereference them. This
+            assumption can create risks and vulnerabilities that have been documented, but also often overlooked, in previous versions of JSON-LD.
+            The Working Group intends to address this problem through more 
+            specification text, and exploration of options such as the addition of a hash fragment to be used 
+            with the application/ld+json media type responses. This fragment conveys a content hash which 
+            may be used by implementations to further confirm and handle the intentions of the original 
+            document author. (This has already been discussed by the Working Group, see, for example,
+            the open issues <a href="https://github.com/w3c/json-ld-syntax/issues/108">108</a>,
+             <a href="https://github.com/w3c/json-ld-syntax/issues/436">436</a> or 
+            <a href="https://github.com/w3c/json-ld-syntax/issues/422">422</a>.)
+          </li>
+        </ol>
+
+        <!-- Note that the JSON-LD APIs are not browser specific; while appropriate for use within browsers, they are not limited to such use, and there is no requirement for browsers to implement them natively. -->
+
+
+        <p>
+          Development of the 1.2 versions of the JSON-LD specifications will follow the principle of 
+          backward compatibility. This means that any valid JSON-LD 1.1 document will remain valid
+          for JSON-LD 1.2, and that the algorithms of the JSON-LD 1.2 API will yield 
+          <a href="https://www.w3.org/TR/rdf11-concepts/#graph-isomorphism">isomorphic</a> results to
+          those of the JSON-LD 1.1 API — barring any bug or inconsistency of the JSON-LD 1.1 
+          specifications identified in the errata.
+        </p>
+
         <p>
           The Working Group will also develop new Recommendation Track deliverables, based on work incubated by the <a href="https://www.w3.org/community/json-ld/">JSON for Linking Data Community Group</a>,
-          specifying the use of JSON-LD algorithms with similar formats (YAML, CBOR, and more).
+          specifying the use of JSON-LD algorithms with similar formats (YAML and CBOR).
         </p>
-        <p>The Working Group is expected to coordinate with the <a href='https://www.w3.org/community/json-ld/'>JSON for Linking Data Community Group</a> on consensus-based proposals related to content changes for the JSON-LD Working Group Deliverables. The Chairs of this group may choose to reject proposals that are incompatible with this Charter.</p>
 
-        <section id="section-feature-updates">
-          <h3 id="in-scope">In Scope</h3>
-            <p>In addition to Errata and synchronization with the RDF & SPARQL Working Group, features tracked on the
-              <a href="https://github.com/orgs/w3c/projects/84">Project Management Page</a>
-              are in-scope for updates to the core JSON-LD specifications.</p>
-            <p>The Working Group will also consider <a href="https://www.w3.org/2021/Process-20211102/#allow-new-features">allowing new features</a> in
-              these recommendations, according to <a href="https://www.w3.org/2021/Process-20211102/#revised-rec-features">Section 6.3.11.4 of the W3C
-              process</a>, in order to render future evolutions easier.</p>
-        </section>
+        <p>
+          The Working Group is expected to coordinate with the <a href='https://www.w3.org/community/json-ld/'>JSON for Linking Data Community Group</a> on consensus-based proposals related to content changes for the JSON-LD Working Group Deliverables. The Chairs of this group may choose to reject proposals that are incompatible with this Charter.
+        </p>
+
+        <p>
+          Finally, the Working Group will start working on the introduction of the new 
+          <a href="https://www.w3.org/TR/rdf12-concepts">RDF 1.2</a>
+          concepts (primarily triple terms and directional language-tagged string), into the JSON-LD syntax, API, and Framing. The final goal is to 
+          have, eventually, a version of JSON-LD that is fully compatible with the upcoming RDF 1.2
+          version, and provides shortcuts similar to those in
+          <a href="https://www.w3.org/TR/rdf12-turtle/">RDF 1.2 Turtle</a> (e.g., reifying triple, triple annotation).
+          This will be done in strong cooperation with the 
+          <a href="https://www.w3.org/groups/wg/rdf-star">RDF &amp; SPARQL Working Group</a>. 
+        </p>
 
         <section id="section-out-of-scope">
           <h3 id="out-of-scope">Out of Scope</h3>
             <p>The following features are out of scope, and will not be addressed by this Working Group.</p>
 
             <ul class="scope">
-              <li>RDF Dataset Normalization.</li>
               <li>Linked Data Signatures.</li>
               </ul>
         </section>
@@ -230,48 +293,54 @@
             <dl>
             <dt id="json-ld-12" class="spec">JSON-LD 1.2</dt>
             <dd>
-              <p>This specification will define a new version of JSON-LD, fully compatible with <a href="https://www.w3.org/TR/rdf12-concepts">RDF 1.2</a>.</p>
+              <!-- <p>This specification will define a new version of JSON-LD, fully compatible with <a href="https://www.w3.org/TR/rdf12-concepts">RDF 1.2</a>.</p> -->
+              <p>This specification will define a new version of JSON-LD, including improvements as listed in 
+                the <a href="#scope">Scope Section</a> above. </p>
+                
+                
 
               <p class="draft-status"><b>Draft state:</b> <a href="https://www.w3.org/TR/TR/json-ld11">Adopted from JSON-LD 1.1 Recommendation</a>.</p>
 
               <p class="milestone"><b>Expected completion:</b> Q4 2027.</p>
 
-              <p><b>Adopted Draft:</b> JSON-LD 1.1, <a href="https://www.w3.org/TR/2020/REC-json-ld11-20200716/">https://www.w3.org/TR/2020/REC-json-ld11-20200716/</a>, 16 July 2020.</p> 
+              <p><b>Initial Text:</b> JSON-LD 1.1, <a href="https://www.w3.org/TR/2020/REC-json-ld11-20200716/">https://www.w3.org/TR/2020/REC-json-ld11-20200716/</a>, 16 July 2020.</p> 
 
-              <p><b>Exclusion Draft:</b> JSON-LD 1,1, <a href="https://www.w3.org/TR/2020/CR-json-ld11-20200305/">https://www.w3.org/TR/2020/CR-json-ld11-20200305/</a>, 5 March 2020. Exclusion period <b>2020-03-05</b>; Exclusion period <b>2020-05-04</b>.</p>
+              <!-- <p><b>Exclusion Draft:</b> JSON-LD 1,1, <a href="https://www.w3.org/TR/2020/CR-json-ld11-20200305/">https://www.w3.org/TR/2020/CR-json-ld11-20200305/</a>, 5 March 2020. Exclusion period <b>2020-03-05</b>; Exclusion period <b>2020-05-04</b>.</p>
 
-              <p><b>Exclusion Draft Charter:</b> <a href="https://www.w3.org/2018/03/jsonld-wg-charter.html">https://www.w3.org/2018/03/jsonld-wg-charter.html</a>.</p>                
+              <p><b>Exclusion Draft Charter:</b> <a href="https://www.w3.org/2018/03/jsonld-wg-charter.html">https://www.w3.org/2018/03/jsonld-wg-charter.html</a>.</p>                 -->
             </dd>
 
             <dt id="json-ld-api-12" class="spec">JSON-LD 1.2 Processing Algorithms and API</dt>
             <dd>
-              <p>This specification will define new version of JSON-LD Processing Algorithms and API, fully compatible with <a href="https://www.w3.org/TR/rdf12-concepts">RDF 1.2</a>.</p>
+              <p>This specification will define a new version of JSON-LD Processing Algorithms and API, including improvements as listed in 
+                the <a href="#scope">Scope Section</a> above.</p>
 
               <p class="draft-status"><b>Draft state:</b> <a href="https://www.w3.org/TR/json-ld11-api/">Adopted from JSON-LD 1.1 Processing Algorithms and API Recommendation</a>.</p>
               
               <p class="milestone"><b>Expected completion:</b> Q4 2027.</p>
 
-              <p><b>Adopted Draft:</b> JSON-LD 1.1, <a href="https://www.w3.org/TR/2020/REC-json-ld11-api-20200716/">https://www.w3.org/TR/2020/REC-json-ld11-api-20200716/</a>, 16 July 2020.</p> 
+              <p><b>Initial Text:</b> JSON-LD 1.1 Processing Algorithms and API, <a href="https://www.w3.org/TR/2020/REC-json-ld11-api-20200716/">https://www.w3.org/TR/2020/REC-json-ld11-api-20200716/</a>, 16 July 2020.</p> 
 
-              <p><b>Exclusion Draft:</b> JSON-LD 1,1, <a href="https://www.w3.org/TR/2020/CR-json-ld11-api-20200305/">https://www.w3.org/TR/2020/CR-json-ld11-api-20200305/</a>, 5 March 2020. Exclusion period <b>2020-03-05</b>; Exclusion period <b>2020-05-04</b>.</p>
+              <!-- <p><b>Exclusion Draft:</b> JSON-LD 1,1, <a href="https://www.w3.org/TR/2020/CR-json-ld11-api-20200305/">https://www.w3.org/TR/2020/CR-json-ld11-api-20200305/</a>, 5 March 2020. Exclusion period <b>2020-03-05</b>; Exclusion period <b>2020-05-04</b>.</p>
 
-              <p><b>Exclusion Draft Charter:</b> <a href="https://www.w3.org/2018/03/jsonld-wg-charter.html">https://www.w3.org/2018/03/jsonld-wg-charter.html</a>.</p>                
+              <p><b>Exclusion Draft Charter:</b> <a href="https://www.w3.org/2018/03/jsonld-wg-charter.html">https://www.w3.org/2018/03/jsonld-wg-charter.html</a>.</p>                 -->
             </dd>
 
 
             <dt id="json-ld-framing-12" class="spec">JSON-LD 1.2 Framing</dt>
             <dd>
-              <p>This specification will define new version of JSON-LD Framing, fully compatible with <a href="https://www.w3.org/TR/rdf12-concepts">RDF 1.2</a>.</p>
+              <p>This specification will define a new version of JSON-LD Framing, including improvements as listed in 
+                the <a href="#scope">Scope Section</a> above. </p>
 
               <p class="draft-status"><b>Draft state:</b> <a href="https://www.w3.org/TR/json-ld11-framing/">Adopted from JSON-LD 1.1 Framing Recommendation</a>.</p>
               
               <p class="milestone"><b>Expected completion:</b> Q4 2027.</p>
 
-              <p><b>Adopted Draft:</b> JSON-LD 1.1, <a href="https://www.w3.org/TR/2020/REC-json-ld11-framing-20200716/">https://www.w3.org/TR/2020/REC-json-ld11-framing-20200716/</a>, 16 July 2020.</p> 
+              <p><b>Initial Text:</b> JSON-LD 1.1 Framing, <a href="https://www.w3.org/TR/2020/REC-json-ld11-framing-20200716/">https://www.w3.org/TR/2020/REC-json-ld11-framing-20200716/</a>, 16 July 2020.</p> 
 
-              <p><b>Exclusion Draft:</b> JSON-LD 1,1, <a href="https://www.w3.org/TR/2020/CR-json-ld11-framing-20200305/">https://www.w3.org/TR/2020/CR-json-ld11-framing-20200305/</a>, 5 March 2020. Exclusion period <b>2020-03-05</b>; Exclusion period <b>2020-05-04</b>.</p>
+              <!-- <p><b>Exclusion Draft:</b> JSON-LD 1,1, <a href="https://www.w3.org/TR/2020/CR-json-ld11-framing-20200305/">https://www.w3.org/TR/2020/CR-json-ld11-framing-20200305/</a>, 5 March 2020. Exclusion period <b>2020-03-05</b>; Exclusion period <b>2020-05-04</b>.</p>
 
-              <p><b>Exclusion Draft Charter:</b> <a href="https://www.w3.org/2018/03/jsonld-wg-charter.html">https://www.w3.org/2018/03/jsonld-wg-charter.html</a>.</p>                
+              <p><b>Exclusion Draft Charter:</b> <a href="https://www.w3.org/2018/03/jsonld-wg-charter.html">https://www.w3.org/2018/03/jsonld-wg-charter.html</a>.</p>                 -->
             </dd>
 
             <!-- ********************** -->
@@ -279,16 +348,77 @@
             <dd>
               <p>This document defines YAML-LD, a set of conventions built on top of YAML, which outlines how to serialize Linked Data as YAML based on JSON-LD syntax, semantics, and APIs.</p>
 
-              <p class="draft-status"><b>Draft state:</b> <a href="https://www.w3.org/community/reports/json-ld/CG-FINAL-yaml-ld-20231206/">YAML-LD</a>, Final Community Group Report (2023-12-06), adopted from the JSON for Linking Data Community Group.</p>
+              <p class="draft-status"><b>Draft state:</b> adopted from the <a href="https://www.w3.org/groups/cg/json-ld">JSON for Linking Data Community Group</a>.</p>
               <p class="milestone"><b>Expected completion:</b> Q1 2027.</p>
+              <p><b>Adopted Draft:</b> <a href="https://www.w3.org/community/reports/json-ld/CG-FINAL-yaml-ld-20231206/">YAML-LD</a>, Final Community Group Report (2023-12-06)</p>
             </dd>
 
             <dt id="cbor-ld-10" class="spec">CBOR-LD 1.0</dt>
             <dd>
               <p>This specification defines CBOR-LD, a CBOR-based format to serialize Linked Data. The encoding is designed to leverage the existing JSON-LD ecosystem, to provide a compact serialization format for those seeking efficient encoding schemes for Linked Data.</p>
 
-              <p class="draft-status"><b>Draft state:</b> <a href="https://json-ld.github.io/cbor-ld-spec/">CBOR-LD</a>, Community Group Draft Report (2025-05-09), adopted from the JSON for Linking Data Community Group.</p>
+              <p class="draft-status"><b>Draft state:</b> adopted from the <a href="https://www.w3.org/groups/cg/json-ld">JSON for Linking Data Community Group</a>.</p>
               <p class="milestone"><b>Expected completion:</b> Q1 2027.</p>
+              <p><b>Adopted Draft:</b> <a href="https://json-ld.github.io/cbor-ld-spec/">CBOR-LD</a>, Community Group Draft Report (2025-05-09)</p>
+            </dd>
+          </dl>
+        </section>
+
+        <section id="incubation">
+          <!-- If no incubation or not a Working Group, delete the section. -->
+          <h3>
+            Tentative Deliverables
+          </h3>
+          <p>Depending on the incubation progress, interest from multiple implementers, and the consensus
+            of the Group participants, the Working Group may adopt the following documents
+             as Rec-track specifications, all related to the compatibility of JSON-LD with 
+             <a href="https://www.w3.org/TR/rdf12-concepts">RDF&nbsp;1.2</a>:
+            </p>
+          <dl>
+            <dt id="json-ld-13" class="spec">JSON-LD 1.3</dt>
+            <dd>
+              <p>
+                This specification will define a new version of JSON-LD, fully compatible with <a href="https://www.w3.org/TR/rdf12-concepts">RDF 1.2</a>.
+              </p>
+              <p class="draft-status"><b>Draft state:</b>
+                Proposal in <a href="https://json-ld.github.io/json-ld-star/">JSON-LD Star</a>, JSON for Linked Data Community Group Draft Report.
+              </p>
+            </dd>
+            <dt id="json-ld-13" class="spec">JSON-LD 1.3 Processing Algorithms and API</dt>
+            <dd>
+              <p>
+                This specification will define a new version of JSON-LD API, fully compatible with <a href="https://www.w3.org/TR/rdf12-concepts">RDF 1.2</a>.
+              </p>
+              <p class="draft-status"><b>Draft state:</b>
+                Proposal in <a href="https://json-ld.github.io/json-ld-star/">JSON-LD Star</a>, JSON for Linked Data Community Group Draft Report.
+              </p>
+            </dd>
+            <dt id="json-ld-13" class="spec">JSON-LD 1.3 Framing</dt>
+            <dd>
+              <p>
+                This specification will define a new version of JSON-LD Framing, fully compatible with <a href="https://www.w3.org/TR/rdf12-concepts">RDF 1.2</a>.
+              </p>
+              <p class="draft-status"><b>Draft state:</b>
+                Proposal in <a href="https://json-ld.github.io/json-ld-star/">JSON-LD Star</a>, JSON for Linked Data Community Group Draft Report.
+              </p>
+            </dd>
+            <dt id="json-ld-13" class="spec">YAML-LD 1.1</dt>
+            <dd>
+              <p>
+                This specification will define a new version of YAML-LD, fully compatible with <a href="https://www.w3.org/TR/rdf12-concepts">RDF 1.2</a>.
+              </p>
+              <p class="draft-status"><b>Draft state:</b>
+                Proposal in <a href="https://json-ld.github.io/json-ld-star/">JSON-LD Star</a>, JSON for Linked Data Community Group Draft Report.
+              </p>
+            </dd>
+            <dt id="json-ld-13" class="spec">CBOR-LD 1.1</dt>
+            <dd>
+              <p>
+                This specification will define a new version of CBOR-LD, fully compatible with <a href="https://www.w3.org/TR/rdf12-concepts">RDF 1.2</a>.
+              </p>
+              <p class="draft-status"><b>Draft state:</b>
+                Proposal in <a href="https://json-ld.github.io/json-ld-star/">JSON-LD Star</a>, JSON for Linked Data Community Group Draft Report.
+              </p>
             </dd>
           </dl>
         </section>
@@ -416,6 +546,17 @@
 
           </dl>
         </section>
+        <section>
+          <h3 id="external-coordination">External Organizations</h3>
+          <dl>
+            <dt><a href="https://datatracker.ietf.org/wg/cbor/about/">IETF CBOR Working Group</a></dt>
+            <dd>Coordinating on the CBOR-LD specification.</dd>
+
+            <dt><a href="https://yaml.org/spec/1.2.2/ext/team/">YAML Language Development Team</a></dt>
+            <dd>Coordinating on the YAML-LD specification.</dd>
+          </dl>
+        </section>
+
       </section>
 
       <section class="participation">
@@ -624,7 +765,8 @@
 
     <footer>
       <address>
-        <a href="mailto:pierre-antoine@w3.org">Pierre-Antoine Champin</a>
+        <a href="mailto:pierre-antoine@w3.org">Pierre-Antoine Champin</a> and 
+        <a href="mailto:ivan@w3.org">Ivan Herman</a>
       </address>
 
       <p class="copyright">Copyright © 2025 <a href="https://www.w3.org/">World Wide Web Consortium</a>.<br>
